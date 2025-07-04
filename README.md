@@ -55,6 +55,8 @@ python manage.py runserver
 | GET    | `/api/applicants/<job_id>/` | List all applicants for a job  |
 
 
+Base URL: Base URL: http://127.0.0.1:8000/
+
 API Endpoints + Sample JSON
 1. Create Company
 POST /api/create-company/
@@ -137,5 +139,3 @@ Testing
 Use Thunder Client or Postman
 
 Set Content-Type: application/json
-
-Base URL: http://127.0.0.1:8000/
