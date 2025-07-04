@@ -1,4 +1,4 @@
-# 🧑‍💼 Job Portal API
+# Job Portal API
 
 A Django-based backend for a job portal built using **core Django only** — no Django REST Framework (DRF).  
 It allows companies to post jobs and applicants to apply, returning JSON responses manually using `JsonResponse`.
@@ -44,6 +44,7 @@ python manage.py migrate
 # Run the development server
 python manage.py runserver
 
+```
 
 | Method | Endpoint                    | Description                    |
 | ------ | --------------------------- | ------------------------------ |
@@ -57,25 +58,22 @@ python manage.py runserver
 API Endpoints + Sample JSON
 1. Create Company
 POST /api/create-company/
-
-json
+```bash
 {
   "name": "Google",
   "location": "Bangalore",
   "description": "Tech company"
 }
-Response:
-
-json
+```
+```bash
 {
   "id": 1,
   "status": "Company created"
 }
-
+```
 2. Post Job
 POST /api/post-job/
-
-json
+```bash
 {
   "company_id": 1,
   "title": "Backend Developer",
@@ -83,19 +81,19 @@ json
   "salary": 60000,
   "location": "Remote"
 }
+```
 Response:
-
-json
+```bash
 {
   "id": 1,
   "status": "Job posted"
 }
+```
 3. Get All Jobs
 GET /api/jobs/
 
 Response:
-
-json
+```bash
 [
   {
     "id": 1,
@@ -104,31 +102,28 @@ json
     "location": "Remote"
   }
 ]
+```
 4. Apply for Job
 POST /api/apply/
-
-json
+```bash
 {
   "name": "John Doe",
   "email": "john@example.com",
   "resume_link": "https://example.com/resume.pdf",
   "job_id": 1
 }
+```
 Response:
-
-json
+```bash
 {
   "id": 1,
   "status": "Applied successfully"
 }
+```
 5. Get Applicants for a Job
 GET /api/applicants/1/
-
-Response:
-
-json
-Copy
-Edit
+Response
+```bash
 [
   {
     "name": "John Doe",
@@ -137,6 +132,7 @@ Edit
     "applied_at": "2025-07-04T17:42:00Z"
   }
 ]
+```
 Testing
 Use Thunder Client or Postman
 
